@@ -2,12 +2,12 @@ package com.topic.topic4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,7 +45,11 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String country = parent.getItemAtPosition(position).toString();
                 String capital = result.get(country);
-                Toast.makeText(MainActivity.this, "Capital of"+country+ "is :"+capital, Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "Capital of"+country+ "is :"+capital, Toast.LENGTH_SHORT).show();
+                Intent bibek = new Intent(MainActivity.this ,CapitalActivity.class);
+                bibek.putExtra("capital" , capital);
+                startActivity(bibek);
+
 
             }
         });
