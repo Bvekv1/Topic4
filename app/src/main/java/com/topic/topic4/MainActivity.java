@@ -8,9 +8,9 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
     ListView show;
-    public static final String countries[] = {"Nepal",
-            "India",
-            "China"};
+    public static final String countries[] = {"Nepal", "Kathmadu",
+            "India", "New Delhi",
+            "China", "Beijing"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
